@@ -1,0 +1,967 @@
+/*Fonts font-family: 'Barlow Condensed', sans-serif;
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Dancing+Script&family=Poppins:wght@100;200;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    position: inherit;
+    height: 150vh;
+}
+
+/*Pop Up*/
+/* Popup'ı gizle */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup içeriği */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Kapat düğmesi */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/*Header Top Red*/
+
+.headerTopRed {
+    font-family: 'Poppins', sans-serif;
+    background: #CD313E;
+    color: white;
+    height: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerTopLeft {
+    width: 17.5%;
+    box-shadow: 0.1px 0.1px 1px white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerTopIcons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headerTopIcons a {
+    color: white;
+}
+
+.headerTopIcons a:hover {
+    color: white;
+}
+
+.headerTopRight {
+    font-size: 0.75em;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0.1px 0.1px 1px white;
+}
+
+.headerTopRight #arrowBottom1,
+#arrowBottom2 {
+    cursor: pointer;
+}
+
+.langText,
+.money {
+    cursor: pointer;
+}
+
+/*Header Hover*/
+
+#solaVerilecek {
+    margin-right: 2.1em;
+}
+
+#acilanDiv2 {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    position: absolute;
+}
+
+#acilanDiv2 {
+    right: 13em;
+    margin-top: 4.5em;
+    box-shadow: 1px 1px 5px black;
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#acilanDiv2 .topDiv {
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.dropBtn {
+    background: transparent;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.dropdown-menu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+}
+
+/*Real Header*/
+
+#bottomCont {
+    height: 5em;
+    box-shadow: 0.1px 1px 0.1px rgba(198, 203, 208, 0.632);
+}
+
+.pressMartHeader {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pressMartHeader .closeDiv {
+    display: none;
+}
+
+.pressMartLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 19%;
+}
+
+.pressMartLeft .supemail {
+    font-size: 0.9em;
+}
+
+.pressMartLeft .prsMartIcon i {
+    display: flex;
+    margin-bottom: 0.5em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #CD313E;
+    font-size: 2em;
+}
+
+.pressMartLeft .boldSpan {
+    font-weight: bold;
+
+}
+
+.pressMartOrta {
+    cursor: pointer;
+    display: flex;
+}
+
+.pressMartOrta .textPressMart {
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.pressMartRight {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pressMartRight .rightIcon {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pressMartRight .rightIcon:hover {
+    color: #CD313E;
+}
+
+.pressMartRight .rightIcon i {
+    font-size: 1.3em;
+}
+
+.pressMartRight .rightIcon p {
+    font-size: 0.8em;
+}
+
+.pressMartHeader .btn {
+    display: none;
+}
+
+.pressMartRight #open .btn {
+    display: block;
+}
+
+.pressMartRight #exampleModal {
+    margin-top: 10em;
+    margin-left: -14.5em;
+    display: block;
+}
+
+.pressMartRight .modal-content {
+    width: 60em;
+    height: 18em;
+}
+
+.pressMartRight .flexVer {
+    margin: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pressMartRight .flexVer .leftModal {
+    background: #cd313e;
+    box-shadow: 2px 2px 10px #cd313e;
+    border-radius: 35px;
+    color: white;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pressMartRight .flexVer .leftModal .textLogIn {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1em auto;
+}
+
+.pressMartRight .flexVer .leftModal .textGetAcc {
+    font-size: 1em;
+    width: 40%;
+    height: 100%;
+    text-align: justify;
+}
+
+.pressMartRight #myAccBtn {
+    background: #CD313E;
+    color: white;
+    width: 90%;
+    border: none;
+    height: 2.5em;
+    font-weight: bold;
+    transition: 0.4s all;
+}
+
+.pressMartRight #myAccBtn:hover {
+    opacity: 0.9;
+}
+
+.pressMartRight input::placeholder {
+    font-size: 0.8em;
+}
+
+.pressMartRight form .col-sm-10 {
+    margin-left: 1em;
+}
+
+.pressMartRight .offcanvas-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.pressMartRight .form-control {
+    width: 100%;
+}
+
+#open .btn-close {
+    font-size: 0.7em;
+    margin-top: 0.1em;
+    background-color: #CD313E;
+    opacity: 1;
+    color: white;
+    font-size: 1.5em;
+    margin-left: 90%;
+}
+
+/*Carusel-Img Section*/
+
+.imgCarousel {
+    width: 80%;
+    margin: 0 auto;
+    height: 35rem;
+}
+
+#section1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2.5em auto;
+}
+
+/*Sol Carousel Sekil Deyisen Hisse*/
+
+.leftImg {
+    width: 65%;
+    height: 30em;
+}
+
+.leftImg .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.leftImg .box .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.leftImg .carouselLayout {
+    margin: 0 auto;
+    color: white;
+    width: 100%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    padding-top: 5em;
+}
+
+#carouselLayoutId {
+    align-items: flex-start;
+}
+
+.carouselLayout .carouseText {
+    width: 50%;
+    justify-content: space-evenly;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carouselLayout .carouseText .bestDigital {
+    color: #CD313E;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+}
+
+.carouselLayout .carouseText .hdCam {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.carouselLayout .carouseText .uptoOff {
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.carouselButton {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 2em;
+}
+
+#colorRed {
+    color: #CD313E;
+    background-color: #CD313E;
+}
+
+.carouselButton .buyNow {
+    background-color: #CD313E;
+    color: white;
+    border: none;
+    width: 8em;
+    height: 2.7em;
+    font-weight: bold;
+}
+
+.carouselButton .readMore {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    width: 9em;
+    height: 2.7em;
+    font-weight: bold;
+    transition: 0.35s ease-in-out;
+}
+
+.carouselButton .readMore:hover {
+    background: #CD313E;
+    border: #CD313E;
+}
+
+#carBackImg1 {
+    background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-slider-2.jpg);
+    background-size: cover
+}
+
+#carBackImg2 {
+    background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-slider-1.jpg);
+    background-size: cover;
+}
+
+/*Sag Alt-Alta Sekil Olan Hisse*/
+
+.rightImg {
+    width: 30%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box1,
+.box2 {
+    height: 14.5em;
+}
+
+.box1 {
+    transition: 0.3s ease-in-out;
+    background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-banner-1.jpg);
+    background-size: cover;
+}
+
+.box1:hover,
+.box2:hover {
+    transform: scale(1.03);
+}
+
+.box2 {
+    background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-banner-2.jpg);
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.boxFrontTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em auto;
+}
+
+#solaCek {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 1em;
+}
+
+.mFshn {
+    color: white;
+    background-color: #CD313E;
+    padding-left: 0.4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-right: 0.4em;
+    font-size: 1em;
+}
+
+.acs {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 2.2em;
+}
+
+.smlText {
+    color: white;
+}
+
+.shopNow {
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*! Responsivlik Mobil Ucun */
+@media (max-width: 767px) {
+
+    /*Header Red*/
+
+    .headerTopRed {
+        font-family: 'Poppins', sans-serif;
+        background: #CD313E;
+        color: white;
+        width: 100%;
+        height: 2.5em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .headerTopLeft {
+        display: none;
+    }
+
+    .headerTopRight {
+        width: 100%;
+    }
+
+    #solaVerilecek {
+        right: 2em;
+    }
+
+    /*Header*/
+
+    #bottomCont {
+        height: 5em;
+        box-shadow: 0.1px 1px 0.1px rgba(198, 203, 208, 0.632);
+    }
+
+    .pressMartHeader {
+        margin: 1em auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .pressMartHeader {
+        margin: 0 auto;
+        display: flex;
+        height: 5em;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .pressMartHeader .closeDiv {
+        display: block;
+        border: none;
+    }
+
+    .pressMartLeft {
+        display: none;
+    }
+
+    .pressMartHeader .btn {
+        cursor: pointer;
+        display: block;
+        background: transparent;
+        color: black;
+        border: none;
+        font-size: 1.2em;
+        transition: 0.5s ease-in-out;
+    }
+
+    .pressMartHeader .btn:hover {
+        background: transparent;
+        color: black;
+        transform: scale(1.25);
+    }
+
+    .pressMartOrta {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .pressMartOrta .textPressMart {
+        font-weight: bolder;
+        font-size: 1.3em;
+        margin-top: 0.4em;
+    }
+
+    .pressMartRight {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .pressMartRight .rightIcon {
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .pressMartRight #close {
+        display: none;
+    }
+
+    .pressMartRight .rightIconBottomText {
+        display: none;
+    }
+
+    .pressMartRight .rightIcon:hover {
+        color: #CD313E;
+    }
+
+    .pressMartRight .rightIcon i {
+        font-size: 1.3em;
+    }
+
+    .pressMartRight .rightIcon p {
+        font-size: 0.8em;
+    }
+
+    .pressMartRight #exampleModal {
+        display: none;
+    }
+
+    #acilanDiv2 {
+        display: none;
+    }
+
+    /*Navbar Click Left Slide Canvas*/
+
+    .offcanvas-header {
+        border-bottom: 1px solid rgba(112, 128, 144, 0.421);
+    }
+
+    .offcanvas-header .canvasTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .canvasTop .leftTopCanvas {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 60%;
+    }
+
+    .canvasTop .leftTopCanvas i {
+        font-size: 1.3em;
+    }
+
+    .canvasTop .leftTopCanvas .logsignText {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0 auto;
+    }
+
+    /*menu-category*/
+
+    .offcanvas-menu-category {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 4em;
+    }
+
+    .offcanvas-menu-category .menuImp {
+        border: none;
+        background: white;
+        color: black;
+        font-size: 1.3em;
+        font-weight: bold;
+        transition: 0.4s all;
+    }
+
+    .offcanvas-menu-category .menuImp:hover {
+        color: #CD313E;
+    }
+
+    /*canvas body*/
+
+    .offcanvas-body {
+        width: 100%;
+    }
+
+    .offcanvas-body nav {
+        height: 80%;
+    }
+
+    .offcanvas-body nav ul {
+        height: 100%;
+    }
+
+    .offcanvas-body nav ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        height: 100%;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .offcanvas-body nav ul li a {
+        border: 1px solid rgba(112, 128, 144, 0.283);
+        height: 4em;
+        display: flex;
+        align-items: center;
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: 0.4s all;
+        text-decoration: none;
+    }
+
+    .offcanvas-body a:hover {
+        color: #CD313E;
+    }
+
+    /*footer*/
+
+    .offcanvas-footer {
+        margin-bottom: 4em;
+    }
+
+    .offcanvas-footer .offcanvas-icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .offcanvas-footer .offcanvas-icons a {
+        color: black;
+    }
+
+    /*Carusel-Img Section*/
+
+    .imgCarousel {
+        width: 100%;
+        margin: 0 auto;
+        height: 45em;
+    }
+
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 2.5em auto;
+    }
+
+    /*Sol Carousel Sekil Deyisen Hisse*/
+
+    .leftImg {
+        width: 100%;
+        height: 14.5em;
+    }
+
+    .leftImg .box {
+        position: relative;
+        width: 100%;
+        height: 14.5em;
+    }
+
+    .leftImg .box .carousel-inner {
+        width: 100%;
+        height: 14.5em;
+    }
+
+    .leftImg .carouselLayout {
+        margin: 0 auto;
+        color: white;
+        width: 100%;
+        height: 13.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: last baseline;
+        padding-top: 5em;
+    }
+
+    #carouselLayoutId {
+        align-items: flex-start;
+    }
+
+    .carouselLayout .carouseText {
+        width: 50%;
+        justify-content: space-evenly;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carouselLayout .carouseText .bestDigital {
+        color: #CD313E;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2em;
+    }
+
+    .carouselLayout .carouseText .hdCam {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .carouselLayout .carouseText .uptoOff {
+        font-size: 0.8em;
+        font-weight: 200;
+    }
+
+    .carouselButton {
+        margin-top: 3.2em;
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    #colorRed {
+        color: #CD313E;
+        background-color: #CD313E;
+    }
+
+    .carouselButton .buyNow {
+        background-color: #CD313E;
+        color: white;
+        border: none;
+        width: 6em;
+        height: 2em;
+        font-size: 0.6em;
+        font-weight: bold;
+    }
+
+    .carouselButton .readMore {
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        width: 6.5em;
+        font-size: 0.6em;
+        height: 2em;
+        font-weight: bold;
+        transition: 0.35s ease-in-out;
+    }
+
+    .carouselButton .readMore:hover {
+        background: #CD313E;
+        border: #CD313E;
+    }
+
+    #carBackImg1 {
+        background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-slider-2.jpg);
+        background-size: cover
+    }
+
+    #carBackImg2 {
+        background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-slider-1.jpg);
+        background-size: cover;
+    }
+
+    /*Sag Alt-Alta Sekil Olan Hisse*/
+
+    .rightImg {
+        width: 100%;
+        height: 30em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .box1,
+    .box2 {
+        height: 14.5em;
+    }
+
+    .box1 {
+        transition: 0.3s ease-in-out;
+        background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-banner-1.jpg);
+        background-size: cover;
+    }
+
+    .box1:hover,
+    .box2:hover {
+        transform: scale(1.03);
+    }
+
+    .box2 {
+        background-image: url(https://pressmart.presslayouts.com/wp-content/uploads/2022/07/home-3-banner-2.jpg);
+        background-size: cover;
+        transition: 0.3s ease-in-out;
+    }
+
+    .boxFrontTop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2em auto;
+    }
+
+    #solaCek {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-left: 1em;
+    }
+
+    .mFshn {
+        color: white;
+        background-color: #CD313E;
+        padding-left: 0.4em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        padding-right: 0.4em;
+        font-size: 1em;
+    }
+
+    .acs {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+        font-size: 2.2em;
+    }
+
+    .smlText {
+        color: white;
+    }
+
+    .shopNow {
+        font-weight: bold;
+        background: transparent;
+        color: white;
+        border: none;
+    }
+}
